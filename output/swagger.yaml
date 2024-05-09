@@ -1312,6 +1312,13 @@ components:
         pageType:
           type: string
           description: The type of the page.
+        pageVersions:
+          type: object
+          properties:
+            approved:
+              $ref: '#/components/schemas/PageVersion'
+            draft:
+              $ref: '#/components/schemas/PageVersion'
         parentSitePage:
           $ref: '#/components/schemas/ParentSitePage'
         renderedPage:
