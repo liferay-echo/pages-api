@@ -263,6 +263,52 @@ paths:
             application/xml:
               schema:
                 $ref: '#/components/schemas/SitePage'
+    put:
+      tags:
+      - SitePage
+      description: Updates the site page with the given friendlyUrlPath, or creates it if it does not exist.
+      operationId: putSiteSitePageByExternalReferenceCode
+      parameters:
+      - name: siteId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: externalReferenceCode
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: fields
+        in: query
+        schema:
+          type: string
+      - name: nestedFields
+        in: query
+        schema:
+          type: string
+      - name: restrictFields
+        in: query
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SitePage'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/SitePage'
+      responses:
+        default:
+          description: default response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SitePage'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/SitePage'
   /v1.0/sites/{siteId}/site-pages/{friendlyUrlPath}/experiences/{experienceKey}:
     get:
       tags:
