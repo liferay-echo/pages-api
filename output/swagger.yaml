@@ -140,6 +140,28 @@ paths:
               schema:
                 $ref: '#/components/schemas/SitePage'
   /v1.0/sites/{siteId}/site-pages/{friendlyUrlPath}:
+    delete:
+      tags:
+      - SitePage
+      description: Deletes a specific public page of a site
+      operationId: deleteSiteSitePage
+      parameters:
+      - name: siteId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: friendlyUrlPath
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        default:
+          description: default response
+          content:
+            application/json: {}
+            application/xml: {}
     get:
       tags:
       - SitePage
