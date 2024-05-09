@@ -353,6 +353,52 @@ paths:
             application/xml:
               schema:
                 $ref: '#/components/schemas/SitePage'
+    patch:
+      tags:
+      - SitePage
+      description: Updates only the fields received in the request body, leaving any other fields untouched.
+      operationId: patchSiteSitePageByExternalReferenceCode
+      parameters:
+      - name: siteId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: externalReferenceCode
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: fields
+        in: query
+        schema:
+          type: string
+      - name: nestedFields
+        in: query
+        schema:
+          type: string
+      - name: restrictFields
+        in: query
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SitePage'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/SitePage'
+      responses:
+        default:
+          description: default response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SitePage'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/SitePage'
     put:
       tags:
       - SitePage
