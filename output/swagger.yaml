@@ -1435,3 +1435,12 @@ components:
           items:
             $ref: "#/components/schemas/PageRule"
           type: array
+    PageVersion:
+      type: object
+      properties:
+        experiences:
+          items:
+            $ref: "#/components/schemas/Experience"
+          type: array
+        settings:
+          $ref: "#/components/schemas/Settings"
