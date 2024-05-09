@@ -753,6 +753,8 @@ components:
             type: string
             description: the localized experience's names.
           description: the localized experience's names.
+        pageStructure:
+          $ref: "#/components/schemas/PageStructure"
         segments:
           type: array
           description: A list of segments the experience is used for.
@@ -1424,3 +1426,12 @@ components:
             type: object
             additionalProperties:
               type: string
+    PageStructure:
+      type: object
+      properties:
+        pageElement:
+          $ref: "#/components/schemas/PageElement"
+        pageRules:
+          items:
+            $ref: "#/components/schemas/PageRule"
+          type: array
