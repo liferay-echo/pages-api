@@ -1280,6 +1280,9 @@ components:
           format: date-time
         experience:
           $ref: '#/components/schemas/Experience'
+        externalReferenceCode:
+          type: string
+          description: The page's external reference code.
         friendlyUrlPath:
           type: string
           description: A relative URL to the page's rendered content.
