@@ -1301,6 +1301,9 @@ components:
             type: string
             description: A list of keywords describing the page.
         pageDefinition:
+          deprecated: true
+          description:
+            "Deprecated as of Cavanaugh (7.4.x), replaced by Experience.pageStructure.pageElement, Experience.pageStructure.pageRules and PageVersion.settings"
           $ref: '#/components/schemas/PageDefinition'
         pagePermissions:
           type: array
